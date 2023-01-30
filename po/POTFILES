@@ -1,0 +1,6 @@
+data/com.chardson.ug_boom.desktop.in
+data/com.chardson.ug_boom.appdata.xml.in
+data/com.chardson.ug_boom.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

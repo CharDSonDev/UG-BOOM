@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ug_boom
+Exec=ug_boom
+Icon=com.chardson.ug_boom
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

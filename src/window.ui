@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="UgBoomWindow" parent="AdwApplicationWindow">
+    <property name="title">UG BOOM</property>
+    <property name="default-width">300</property>
+    <property name="default-height">400</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkHeaderBar" id="header_bar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="name">
+            <property name="label">UE BOOM 2</property>
+            <property name="vexpand">true</property>
+            <style>
+              <class name="title-1"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="Buttons">
+            <property name="halign">center</property>
+            <property name="spacing">10</property>
+            <property name="margin-bottom">32</property>
+            <child>
+              <object class="GtkButton" id="shutdown_button">
+                <property name="icon_name">system-shutdown-symbolic</property>
+                <property name="tooltip_text" translatable="yes">Shutdown</property>
+                <property name="valign">center</property>
+                <property name="action_name">app.shutdown</property>
+                <style>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="volume_up">
+                <property name="icon_name">list-add-symbolic</property>
+                <property name="tooltip_text" translatable="yes">Volume up</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="volume_menos">
+                <property name="icon_name">list-remove-symbolic</property>
+                <property name="tooltip_text" translatable="yes">Volume up</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="equality">
+                <property name="icon_name">network-cellular-signal-excellent-rtl-symbolic</property>
+                <property name="tooltip_text" translatable="yes">Volume up</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>          </object>
+        </child>>
+      </object>
+    </child>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About UG BOOM</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
