@@ -4,6 +4,28 @@ It only works by turning off
 
 ![Screenshot from 2023-01-30 17-19-32](https://user-images.githubusercontent.com/36754778/215602870-49415ebc-2af0-4260-822a-806b603ffdfe.png)
 
+## gatttool comands:
+
+Power On:
+```console
+gatttool -i hci0 -b **UE BOOM MAC** --char-write-req -a 0x0003 -n **DEVICE MAC with ':'**01
+```
+
+Power Off:
+```console
+gatttool -i hci0 -b **UE BOOM MAC** --char-write-req -a 0x0003 -n **DEVICE MAC with ':'**02
+```
+
+UE BOOM Name:
+```console
+gatttool -i hci0 -b **UE BOOM MAC** --char-read --uuid 0x2a00
+```
+
+UE BOOM Battery Level
+```console
+gatttool -i hci0 -b **UE BOOM MAC** --char-read --uuid 0x2a19
+````
+
 ## More information about how to control UE BOOM loudspeakers from Linux and macOS:
 * Android APP: https://github.com/Shingyx/BoomSwitch
 * NPM Plugin: https://github.com/alessandroaime/homebridge-ueboom
